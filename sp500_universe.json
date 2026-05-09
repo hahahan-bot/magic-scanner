@@ -1,0 +1,954 @@
+{
+  "generated_at": "2026-05-09T11:07:17",
+  "leading_sectors": [
+    "XLK_기술",
+    "XLF_금융"
+  ],
+  "candidates": [
+    {
+      "ticker": "TSM",
+      "name": "TSM",
+      "sector": "XLK_기술",
+      "price": 412,
+      "rs_20": 100.0,
+      "rsi_14": 64.05,
+      "vol_ratio": 1.4085,
+      "above_ma": true,
+      "pullback_pct": 1.86,
+      "signal_score": 75,
+      "entry_signal": "A-grade",
+      "grade": "A",
+      "cfg": {
+        "etf": "XLK",
+        "tickers": [
+          "NVDA",
+          "MSFT",
+          "AAPL",
+          "AMD",
+          "MRVL",
+          "AVGO",
+          "TSM"
+        ],
+        "names": [
+          "NVDA",
+          "MSFT",
+          "AAPL",
+          "AMD",
+          "MRVL",
+          "AVGO",
+          "TSM"
+        ],
+        "rs_min": 65,
+        "vol_mult": 1.3,
+        "ma_period": 20,
+        "pullback_min": 0.03,
+        "pullback_max": 0.12,
+        "rsi_lo": 40,
+        "rsi_hi": 60,
+        "take1_pct": 0.15,
+        "take2_pct": 0.25,
+        "stop_pct": 0.05,
+        "trail_pct": 0.07
+      }
+    },
+    {
+      "ticker": "V",
+      "name": "V",
+      "sector": "XLF_금융",
+      "price": 319,
+      "rs_20": 77.69,
+      "rsi_14": 52.77,
+      "vol_ratio": 0.7205,
+      "above_ma": true,
+      "pullback_pct": 4.8,
+      "signal_score": 75,
+      "entry_signal": "A-grade",
+      "grade": "A",
+      "cfg": {
+        "etf": "XLF",
+        "tickers": [
+          "JPM",
+          "BAC",
+          "GS",
+          "MS",
+          "V"
+        ],
+        "names": [
+          "JPM",
+          "BAC",
+          "GS",
+          "MS",
+          "V"
+        ],
+        "rs_min": 55,
+        "vol_mult": 1.2,
+        "ma_period": 20,
+        "pullback_min": 0.03,
+        "pullback_max": 0.08,
+        "rsi_lo": 40,
+        "rsi_hi": 60,
+        "take1_pct": 0.1,
+        "take2_pct": 0.18,
+        "stop_pct": 0.04,
+        "trail_pct": 0.06
+      }
+    }
+  ],
+  "watchlist": [
+    {
+      "ticker": "GS",
+      "name": "GS",
+      "sector": "XLF_금융",
+      "price": 936,
+      "rs_20": 68.45,
+      "rsi_14": 58.17,
+      "vol_ratio": 0.9661,
+      "above_ma": true,
+      "pullback_pct": 0.14,
+      "signal_score": 60,
+      "entry_signal": "B watchlist",
+      "grade": "B",
+      "cfg": {
+        "etf": "XLF",
+        "tickers": [
+          "JPM",
+          "BAC",
+          "GS",
+          "MS",
+          "V"
+        ],
+        "names": [
+          "JPM",
+          "BAC",
+          "GS",
+          "MS",
+          "V"
+        ],
+        "rs_min": 55,
+        "vol_mult": 1.2,
+        "ma_period": 20,
+        "pullback_min": 0.03,
+        "pullback_max": 0.08,
+        "rsi_lo": 40,
+        "rsi_hi": 60,
+        "take1_pct": 0.1,
+        "take2_pct": 0.18,
+        "stop_pct": 0.04,
+        "trail_pct": 0.06
+      }
+    },
+    {
+      "ticker": "MSFT",
+      "name": "MSFT",
+      "sector": "XLK_기술",
+      "price": 415,
+      "rs_20": 100.0,
+      "rsi_14": 53.98,
+      "vol_ratio": 1.0972,
+      "above_ma": false,
+      "pullback_pct": 3.29,
+      "signal_score": 55,
+      "entry_signal": "B watchlist",
+      "grade": "B",
+      "cfg": {
+        "etf": "XLK",
+        "tickers": [
+          "NVDA",
+          "MSFT",
+          "AAPL",
+          "AMD",
+          "MRVL",
+          "AVGO",
+          "TSM"
+        ],
+        "names": [
+          "NVDA",
+          "MSFT",
+          "AAPL",
+          "AMD",
+          "MRVL",
+          "AVGO",
+          "TSM"
+        ],
+        "rs_min": 65,
+        "vol_mult": 1.3,
+        "ma_period": 20,
+        "pullback_min": 0.03,
+        "pullback_max": 0.12,
+        "rsi_lo": 40,
+        "rsi_hi": 60,
+        "take1_pct": 0.15,
+        "take2_pct": 0.25,
+        "stop_pct": 0.05,
+        "trail_pct": 0.07
+      }
+    },
+    {
+      "ticker": "NVDA",
+      "name": "NVDA",
+      "sector": "XLK_기술",
+      "price": 215,
+      "rs_20": 100.0,
+      "rsi_14": 65.82,
+      "vol_ratio": 0.9262,
+      "above_ma": true,
+      "pullback_pct": 0.65,
+      "signal_score": 50,
+      "entry_signal": "B watchlist",
+      "grade": "B",
+      "cfg": {
+        "etf": "XLK",
+        "tickers": [
+          "NVDA",
+          "MSFT",
+          "AAPL",
+          "AMD",
+          "MRVL",
+          "AVGO",
+          "TSM"
+        ],
+        "names": [
+          "NVDA",
+          "MSFT",
+          "AAPL",
+          "AMD",
+          "MRVL",
+          "AVGO",
+          "TSM"
+        ],
+        "rs_min": 65,
+        "vol_mult": 1.3,
+        "ma_period": 20,
+        "pullback_min": 0.03,
+        "pullback_max": 0.12,
+        "rsi_lo": 40,
+        "rsi_hi": 60,
+        "take1_pct": 0.15,
+        "take2_pct": 0.25,
+        "stop_pct": 0.05,
+        "trail_pct": 0.07
+      }
+    },
+    {
+      "ticker": "AAPL",
+      "name": "AAPL",
+      "sector": "XLK_기술",
+      "price": 293,
+      "rs_20": 100.0,
+      "rsi_14": 72.59,
+      "vol_ratio": 0.8178,
+      "above_ma": true,
+      "pullback_pct": 0.0,
+      "signal_score": 50,
+      "entry_signal": "B watchlist",
+      "grade": "B",
+      "cfg": {
+        "etf": "XLK",
+        "tickers": [
+          "NVDA",
+          "MSFT",
+          "AAPL",
+          "AMD",
+          "MRVL",
+          "AVGO",
+          "TSM"
+        ],
+        "names": [
+          "NVDA",
+          "MSFT",
+          "AAPL",
+          "AMD",
+          "MRVL",
+          "AVGO",
+          "TSM"
+        ],
+        "rs_min": 65,
+        "vol_mult": 1.3,
+        "ma_period": 20,
+        "pullback_min": 0.03,
+        "pullback_max": 0.12,
+        "rsi_lo": 40,
+        "rsi_hi": 60,
+        "take1_pct": 0.15,
+        "take2_pct": 0.25,
+        "stop_pct": 0.05,
+        "trail_pct": 0.07
+      }
+    },
+    {
+      "ticker": "AMD",
+      "name": "AMD",
+      "sector": "XLK_기술",
+      "price": 455,
+      "rs_20": 100.0,
+      "rsi_14": 80.85,
+      "vol_ratio": 1.0472,
+      "above_ma": true,
+      "pullback_pct": 0.0,
+      "signal_score": 50,
+      "entry_signal": "B watchlist",
+      "grade": "B",
+      "cfg": {
+        "etf": "XLK",
+        "tickers": [
+          "NVDA",
+          "MSFT",
+          "AAPL",
+          "AMD",
+          "MRVL",
+          "AVGO",
+          "TSM"
+        ],
+        "names": [
+          "NVDA",
+          "MSFT",
+          "AAPL",
+          "AMD",
+          "MRVL",
+          "AVGO",
+          "TSM"
+        ],
+        "rs_min": 65,
+        "vol_mult": 1.3,
+        "ma_period": 20,
+        "pullback_min": 0.03,
+        "pullback_max": 0.12,
+        "rsi_lo": 40,
+        "rsi_hi": 60,
+        "take1_pct": 0.15,
+        "take2_pct": 0.25,
+        "stop_pct": 0.05,
+        "trail_pct": 0.07
+      }
+    },
+    {
+      "ticker": "MRVL",
+      "name": "MRVL",
+      "sector": "XLK_기술",
+      "price": 170,
+      "rs_20": 100.0,
+      "rsi_14": 68.95,
+      "vol_ratio": 1.058,
+      "above_ma": true,
+      "pullback_pct": 1.17,
+      "signal_score": 50,
+      "entry_signal": "B watchlist",
+      "grade": "B",
+      "cfg": {
+        "etf": "XLK",
+        "tickers": [
+          "NVDA",
+          "MSFT",
+          "AAPL",
+          "AMD",
+          "MRVL",
+          "AVGO",
+          "TSM"
+        ],
+        "names": [
+          "NVDA",
+          "MSFT",
+          "AAPL",
+          "AMD",
+          "MRVL",
+          "AVGO",
+          "TSM"
+        ],
+        "rs_min": 65,
+        "vol_mult": 1.3,
+        "ma_period": 20,
+        "pullback_min": 0.03,
+        "pullback_max": 0.12,
+        "rsi_lo": 40,
+        "rsi_hi": 60,
+        "take1_pct": 0.15,
+        "take2_pct": 0.25,
+        "stop_pct": 0.05,
+        "trail_pct": 0.07
+      }
+    },
+    {
+      "ticker": "AVGO",
+      "name": "AVGO",
+      "sector": "XLK_기술",
+      "price": 430,
+      "rs_20": 100.0,
+      "rsi_14": 65.8,
+      "vol_ratio": 1.2215,
+      "above_ma": true,
+      "pullback_pct": 0.0,
+      "signal_score": 50,
+      "entry_signal": "B watchlist",
+      "grade": "B",
+      "cfg": {
+        "etf": "XLK",
+        "tickers": [
+          "NVDA",
+          "MSFT",
+          "AAPL",
+          "AMD",
+          "MRVL",
+          "AVGO",
+          "TSM"
+        ],
+        "names": [
+          "NVDA",
+          "MSFT",
+          "AAPL",
+          "AMD",
+          "MRVL",
+          "AVGO",
+          "TSM"
+        ],
+        "rs_min": 65,
+        "vol_mult": 1.3,
+        "ma_period": 20,
+        "pullback_min": 0.03,
+        "pullback_max": 0.12,
+        "rsi_lo": 40,
+        "rsi_hi": 60,
+        "take1_pct": 0.15,
+        "take2_pct": 0.25,
+        "stop_pct": 0.05,
+        "trail_pct": 0.07
+      }
+    },
+    {
+      "ticker": "JPM",
+      "name": "JPM",
+      "sector": "XLF_금융",
+      "price": 302,
+      "rs_20": 35.35,
+      "rsi_14": 44.43,
+      "vol_ratio": 1.2718,
+      "above_ma": false,
+      "pullback_pct": 4.06,
+      "signal_score": 50,
+      "entry_signal": "B watchlist",
+      "grade": "B",
+      "cfg": {
+        "etf": "XLF",
+        "tickers": [
+          "JPM",
+          "BAC",
+          "GS",
+          "MS",
+          "V"
+        ],
+        "names": [
+          "JPM",
+          "BAC",
+          "GS",
+          "MS",
+          "V"
+        ],
+        "rs_min": 55,
+        "vol_mult": 1.2,
+        "ma_period": 20,
+        "pullback_min": 0.03,
+        "pullback_max": 0.08,
+        "rsi_lo": 40,
+        "rsi_hi": 60,
+        "take1_pct": 0.1,
+        "take2_pct": 0.18,
+        "stop_pct": 0.04,
+        "trail_pct": 0.06
+      }
+    },
+    {
+      "ticker": "MS",
+      "name": "MS",
+      "sector": "XLF_금융",
+      "price": 193,
+      "rs_20": 100.0,
+      "rsi_14": 63.67,
+      "vol_ratio": 0.749,
+      "above_ma": true,
+      "pullback_pct": 0.13,
+      "signal_score": 50,
+      "entry_signal": "B watchlist",
+      "grade": "B",
+      "cfg": {
+        "etf": "XLF",
+        "tickers": [
+          "JPM",
+          "BAC",
+          "GS",
+          "MS",
+          "V"
+        ],
+        "names": [
+          "JPM",
+          "BAC",
+          "GS",
+          "MS",
+          "V"
+        ],
+        "rs_min": 55,
+        "vol_mult": 1.2,
+        "ma_period": 20,
+        "pullback_min": 0.03,
+        "pullback_max": 0.08,
+        "rsi_lo": 40,
+        "rsi_hi": 60,
+        "take1_pct": 0.1,
+        "take2_pct": 0.18,
+        "stop_pct": 0.04,
+        "trail_pct": 0.06
+      }
+    }
+  ],
+  "all_sectors": {
+    "XLK_기술": {
+      "etf_rs": 100.0,
+      "is_leading": true,
+      "stocks": [
+        {
+          "ticker": "TSM",
+          "name": "TSM",
+          "score": 75,
+          "grade": "A",
+          "entry_signal": "강력매수"
+        },
+        {
+          "ticker": "MSFT",
+          "name": "MSFT",
+          "score": 55,
+          "grade": "B",
+          "entry_signal": "매수검토"
+        },
+        {
+          "ticker": "AAPL",
+          "name": "AAPL",
+          "score": 50,
+          "grade": "B",
+          "entry_signal": "매수검토"
+        },
+        {
+          "ticker": "AMD",
+          "name": "AMD",
+          "score": 50,
+          "grade": "B",
+          "entry_signal": "매수검토"
+        },
+        {
+          "ticker": "AVGO",
+          "name": "AVGO",
+          "score": 50,
+          "grade": "B",
+          "entry_signal": "매수검토"
+        },
+        {
+          "ticker": "MRVL",
+          "name": "MRVL",
+          "score": 50,
+          "grade": "B",
+          "entry_signal": "매수검토"
+        },
+        {
+          "ticker": "NVDA",
+          "name": "NVDA",
+          "score": 50,
+          "grade": "B",
+          "entry_signal": "매수검토"
+        }
+      ]
+    },
+    "XLC_통신": {
+      "etf_rs": 65.33,
+      "is_leading": false,
+      "stocks": [
+        {
+          "ticker": "VZ",
+          "name": "VZ",
+          "score": 60,
+          "grade": "B",
+          "entry_signal": "매수검토"
+        },
+        {
+          "ticker": "GOOGL",
+          "name": "GOOGL",
+          "score": 50,
+          "grade": "B",
+          "entry_signal": "매수검토"
+        },
+        {
+          "ticker": "NFLX",
+          "name": "NFLX",
+          "score": 15,
+          "grade": null,
+          "entry_signal": "관망"
+        },
+        {
+          "ticker": "T",
+          "name": "T",
+          "score": 15,
+          "grade": null,
+          "entry_signal": "관망"
+        },
+        {
+          "ticker": "META",
+          "name": "META",
+          "score": 10,
+          "grade": null,
+          "entry_signal": "관망"
+        }
+      ]
+    },
+    "XLF_금융": {
+      "etf_rs": 55.41,
+      "is_leading": true,
+      "stocks": [
+        {
+          "ticker": "V",
+          "name": "V",
+          "score": 75,
+          "grade": "A",
+          "entry_signal": "강력매수"
+        },
+        {
+          "ticker": "GS",
+          "name": "GS",
+          "score": 60,
+          "grade": "B",
+          "entry_signal": "매수검토"
+        },
+        {
+          "ticker": "JPM",
+          "name": "JPM",
+          "score": 50,
+          "grade": "B",
+          "entry_signal": "매수검토"
+        },
+        {
+          "ticker": "MS",
+          "name": "MS",
+          "score": 50,
+          "grade": "B",
+          "entry_signal": "매수검토"
+        },
+        {
+          "ticker": "BAC",
+          "name": "BAC",
+          "score": 25,
+          "grade": null,
+          "entry_signal": "관망"
+        }
+      ]
+    },
+    "XLV_헬스케어": {
+      "etf_rs": 34.85,
+      "is_leading": false,
+      "stocks": [
+        {
+          "ticker": "LLY",
+          "name": "LLY",
+          "score": 75,
+          "grade": "A",
+          "entry_signal": "강력매수"
+        },
+        {
+          "ticker": "ISRG",
+          "name": "ISRG",
+          "score": 50,
+          "grade": "B",
+          "entry_signal": "매수검토"
+        },
+        {
+          "ticker": "UNH",
+          "name": "UNH",
+          "score": 50,
+          "grade": "B",
+          "entry_signal": "매수검토"
+        },
+        {
+          "ticker": "MDT",
+          "name": "MDT",
+          "score": 15,
+          "grade": null,
+          "entry_signal": "관망"
+        },
+        {
+          "ticker": "ABT",
+          "name": "ABT",
+          "score": 0,
+          "grade": null,
+          "entry_signal": "관망"
+        }
+      ]
+    },
+    "XLI_산업재": {
+      "etf_rs": 55.72,
+      "is_leading": false,
+      "stocks": [
+        {
+          "ticker": "CAT",
+          "name": "CAT",
+          "score": 65,
+          "grade": "B",
+          "entry_signal": "매수검토"
+        },
+        {
+          "ticker": "GE",
+          "name": "GE",
+          "score": 30,
+          "grade": null,
+          "entry_signal": "관망"
+        },
+        {
+          "ticker": "RTX",
+          "name": "RTX",
+          "score": 25,
+          "grade": null,
+          "entry_signal": "관망"
+        },
+        {
+          "ticker": "DE",
+          "name": "DE",
+          "score": 10,
+          "grade": null,
+          "entry_signal": "관망"
+        },
+        {
+          "ticker": "HON",
+          "name": "HON",
+          "score": 10,
+          "grade": null,
+          "entry_signal": "관망"
+        }
+      ]
+    },
+    "XLRE_부동산": {
+      "etf_rs": 71.69,
+      "is_leading": false,
+      "stocks": [
+        {
+          "ticker": "EQIX",
+          "name": "EQIX",
+          "score": 55,
+          "grade": "B",
+          "entry_signal": "매수검토"
+        },
+        {
+          "ticker": "AMT",
+          "name": "AMT",
+          "score": 50,
+          "grade": "B",
+          "entry_signal": "매수검토"
+        },
+        {
+          "ticker": "PLD",
+          "name": "PLD",
+          "score": 50,
+          "grade": "B",
+          "entry_signal": "매수검토"
+        },
+        {
+          "ticker": "SPG",
+          "name": "SPG",
+          "score": 40,
+          "grade": null,
+          "entry_signal": "관망"
+        },
+        {
+          "ticker": "O",
+          "name": "O",
+          "score": 25,
+          "grade": null,
+          "entry_signal": "관망"
+        }
+      ]
+    },
+    "XLU_유틸리티": {
+      "etf_rs": 22.14,
+      "is_leading": false,
+      "stocks": [
+        {
+          "ticker": "D",
+          "name": "D",
+          "score": 50,
+          "grade": "B",
+          "entry_signal": "매수검토"
+        },
+        {
+          "ticker": "AEP",
+          "name": "AEP",
+          "score": 25,
+          "grade": null,
+          "entry_signal": "관망"
+        },
+        {
+          "ticker": "NEE",
+          "name": "NEE",
+          "score": 25,
+          "grade": null,
+          "entry_signal": "관망"
+        },
+        {
+          "ticker": "DUK",
+          "name": "DUK",
+          "score": 15,
+          "grade": null,
+          "entry_signal": "관망"
+        },
+        {
+          "ticker": "SO",
+          "name": "SO",
+          "score": 15,
+          "grade": null,
+          "entry_signal": "관망"
+        }
+      ]
+    },
+    "XLE_에너지": {
+      "etf_rs": 37.28,
+      "is_leading": false,
+      "stocks": [
+        {
+          "ticker": "SLB",
+          "name": "SLB",
+          "score": 55,
+          "grade": "B",
+          "entry_signal": "매수검토"
+        },
+        {
+          "ticker": "CVX",
+          "name": "CVX",
+          "score": 40,
+          "grade": null,
+          "entry_signal": "관망"
+        },
+        {
+          "ticker": "EOG",
+          "name": "EOG",
+          "score": 25,
+          "grade": null,
+          "entry_signal": "관망"
+        },
+        {
+          "ticker": "COP",
+          "name": "COP",
+          "score": 15,
+          "grade": null,
+          "entry_signal": "관망"
+        },
+        {
+          "ticker": "XOM",
+          "name": "XOM",
+          "score": 15,
+          "grade": null,
+          "entry_signal": "관망"
+        }
+      ]
+    },
+    "XLP_필수소비재": {
+      "etf_rs": 62.84,
+      "is_leading": false,
+      "stocks": [
+        {
+          "ticker": "WMT",
+          "name": "WMT",
+          "score": 85,
+          "grade": "A",
+          "entry_signal": "강력매수"
+        },
+        {
+          "ticker": "COST",
+          "name": "COST",
+          "score": 60,
+          "grade": "B",
+          "entry_signal": "매수검토"
+        },
+        {
+          "ticker": "KO",
+          "name": "KO",
+          "score": 60,
+          "grade": "B",
+          "entry_signal": "매수검토"
+        },
+        {
+          "ticker": "PG",
+          "name": "PG",
+          "score": 60,
+          "grade": "B",
+          "entry_signal": "매수검토"
+        },
+        {
+          "ticker": "PEP",
+          "name": "PEP",
+          "score": 10,
+          "grade": null,
+          "entry_signal": "관망"
+        }
+      ]
+    }
+  },
+  "sector_scores": {
+    "XLK_기술": {
+      "avg_rs": 100.0,
+      "avg_ret20": 0.2985,
+      "rs_trend": 0.3,
+      "is_leading": true
+    },
+    "XLC_통신": {
+      "avg_rs": 43.5,
+      "avg_ret20": 0.0073,
+      "rs_trend": -7.69,
+      "is_leading": false
+    },
+    "XLF_금융": {
+      "avg_rs": 63.57,
+      "avg_ret20": 0.0214,
+      "rs_trend": -27.3,
+      "is_leading": true
+    },
+    "XLV_헬스케어": {
+      "avg_rs": 40.97,
+      "avg_ret20": -0.0175,
+      "rs_trend": -5.56,
+      "is_leading": false
+    },
+    "XLI_산업재": {
+      "avg_rs": 29.93,
+      "avg_ret20": -0.0417,
+      "rs_trend": -14.79,
+      "is_leading": false
+    },
+    "XLRE_부동산": {
+      "avg_rs": 58.01,
+      "avg_ret20": 0.0148,
+      "rs_trend": -22.41,
+      "is_leading": false
+    },
+    "XLU_유틸리티": {
+      "avg_rs": 26.08,
+      "avg_ret20": -0.0452,
+      "rs_trend": -29.62,
+      "is_leading": false
+    },
+    "XLE_에너지": {
+      "avg_rs": 29.97,
+      "avg_ret20": -0.0436,
+      "rs_trend": -13.26,
+      "is_leading": false
+    },
+    "XLP_필수소비재": {
+      "avg_rs": 56.27,
+      "avg_ret20": -0.0041,
+      "rs_trend": -4.65,
+      "is_leading": false
+    }
+  },
+  "next_sectors": {
+    "next_in_cycle": [
+      "XLC_통신",
+      "XLF_금융"
+    ],
+    "rs_rising": [],
+    "high_conviction": [],
+    "conviction_source": {},
+    "current_peak_risk": true,
+    "reasoning": "XLK_기술 RS=100.0 피크. 순환 다음: XLC_통신·XLF_금융(RS하락중-대기)."
+  },
+  "market_source": "SPY"
+}

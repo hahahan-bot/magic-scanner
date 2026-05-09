@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"/>
+  <meta name="theme-color" content="#1a1a1a"/>
+  <title>섹터 스캐너</title>
+  <link rel="manifest" href="./manifest.json"/>
+  <style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+:root {
+  --bg: #ffffff;
+  --bg2: #f5f5f0;
+  --text: #1a1a1a;
+  --text2: #666;
+  --border: rgba(0,0,0,0.1);
+  --amber: #FAEEDA;
+  --amber-text: #633806;
+  --green: #EAF3DE;
+  --green-text: #27500A;
+  --blue: #E6F1FB;
+  --blue-text: #0C447C;
+  --red: #FCEBEB;
+  --red-text: #791F1F;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #1a1a1a;
+    --bg2: #2a2a2a;
+    --text: #f0f0f0;
+    --text2: #aaa;
+    --border: rgba(255,255,255,0.1);
+    --amber-text: #E8C48A;
+    --blue-text: #9EC8EE;
+    --green-text: #A8D48C;
+  }
+}
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  font-size: 14px;
+  background: var(--bg);
+  color: var(--text);
+  max-width: 480px;
+  margin: 0 auto;
+  min-height: 100dvh;
+}
+.header {
+  position: sticky; top: 0; z-index: 10;
+  background: var(--bg);
+  border-bottom: 1px solid var(--border);
+  padding: 0 16px;
+  height: 44px;
+  display: flex; align-items: center;
+  justify-content: space-between;
+}
+.header h1 { font-size: 16px; font-weight: 600; }
+.header-actions { display: flex; gap: 8px; align-items: center; }
+.header-actions button {
+  background: none; border: none; cursor: pointer;
+  font-size: 18px; padding: 6px; line-height: 1;
+  color: var(--text);
+}
+.tabs {
+  display: flex;
+  border-bottom: 1px solid var(--border);
+}
+.tab {
+  flex: 1; padding: 12px;
+  text-align: center;
+  font-size: 14px;
+  border-bottom: 2px solid transparent;
+  cursor: pointer;
+  color: var(--text2);
+}
+.tab.active { border-bottom-color: #1a73e8; font-weight: 500; color: var(--text); }
+@media (prefers-color-scheme: dark) {
+  .tab.active { border-bottom-color: #8ab4f8; }
+}
+.scroll-area { padding: 12px 16px 28px; }
+.card {
+  background: var(--bg2);
+  border-radius: 12px;
+  padding: 14px;
+  margin-bottom: 10px;
+}
+.card h2 { font-size: 13px; color: var(--text2); margin-bottom: 8px; font-weight: 500; }
+.peak-banner {
+  background: var(--amber);
+  color: var(--amber-text);
+  border-radius: 10px;
+  padding: 10px 14px;
+  margin-bottom: 10px;
+  font-size: 13px;
+  line-height: 1.45;
+}
+.next-line { margin-bottom: 6px; line-height: 1.4; }
+.next-line strong { display: block; font-size: 12px; color: var(--text2); margin-bottom: 2px; font-weight: 500; }
+.stock-scroll {
+  display: flex; gap: 10px;
+  overflow-x: auto;
+  padding-bottom: 4px;
+  -webkit-overflow-scrolling: touch;
+}
+.stock-card {
+  flex-shrink: 0;
+  width: 110px;
+  background: var(--blue);
+  color: var(--blue-text);
+  border-radius: 10px;
+  padding: 12px 10px;
+}
+.stock-card .ticker { font-size: 18px; font-weight: 600; }
+.stock-card .meta { font-size: 11px; margin-top: 4px; opacity: 0.9; line-height: 1.3; }
+.rs-bar {
+  height: 4px;
+  background: var(--border);
+  border-radius: 2px;
+  margin-top: 4px;
+}
+.rs-fill {
+  height: 100%;
+  border-radius: 2px;
+  background: #1a73e8;
+  transition: width 0.3s;
+}
+@media (prefers-color-scheme: dark) {
+  .rs-fill { background: #8ab4f8; }
+}
+.sector-row {
+  padding: 10px 0;
+  border-bottom: 1px solid var(--border);
+  font-size: 13px;
+}
+.sector-row:last-child { border-bottom: none; }
+.sector-row-top {
+  display: flex; align-items: center; justify-content: space-between; gap: 8px;
+  margin-bottom: 4px;
+}
+.badge-lead {
+  font-size: 10px; background: var(--green); color: var(--green-text);
+  padding: 2px 6px; border-radius: 4px; margin-right: 6px; white-space: nowrap;
+}
+.rs-num { font-weight: 600; font-variant-numeric: tabular-nums; }
+.trend { font-size: 14px; margin-left: 4px; }
+.accordion-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 0;
+  cursor: pointer;
+  border-bottom: 1px solid var(--border);
+  font-weight: 500;
+}
+.accordion-header .chev { color: var(--text2); font-size: 12px; }
+.accordion-body { display: none; padding-bottom: 4px; }
+.accordion-body.open { display: block; }
+.footer-note { font-size: 12px; color: var(--text2); text-align: center; margin-top: 8px; }
+.error-box {
+  background: var(--red); color: var(--red-text);
+  border-radius: 10px; padding: 12px; font-size: 13px;
+}
+.watch-item {
+  padding: 8px 0;
+  border-bottom: 1px solid var(--border);
+  font-size: 13px;
+}
+.watch-item:last-child { border-bottom: none; }
+.watch-item .nm { font-weight: 500; }
+  </style>
+</head>
+<body>
+  <header class="header">
+    <h1>섹터 스캐너</h1>
+    <div class="header-actions">
+      <button type="button" id="refresh" title="새로고침">🔄</button>
+      <button type="button" id="settings" title="데이터 URL 설정">⚙</button>
+    </div>
+  </header>
+  <nav class="tabs">
+    <div class="tab active" data-tab="kospi">코스피</div>
+    <div class="tab" data-tab="sp500">S&amp;P 500</div>
+  </nav>
+  <main class="scroll-area" id="main"></main>
+
+<script>
+(function () {
+  const STORAGE_KEY = 'scanner_source';
+  let currentTab = 'kospi';
+
+  function initSourceFromQuery() {
+    const p = new URLSearchParams(location.search);
+    if (!p.has('source')) return;
+    const s = p.get('source');
+    if (s === null) return;
+    const v = String(s).trim();
+    if (v === '' || v === 'local') {
+      localStorage.setItem(STORAGE_KEY, './');
+    } else if (/^https?:\/\//i.test(v)) {
+      localStorage.setItem(STORAGE_KEY, v.replace(/\/?$/, '/') );
+    }
+  }
+
+  function getScannerSource() {
+    return localStorage.getItem(STORAGE_KEY) || './';
+  }
+
+  function isUnderPwaPath() {
+    const path = location.pathname || '';
+    return /\/pwa\//i.test(path) || /\/pwa$/i.test(path);
+  }
+
+  function resolveJsonUrl(filename) {
+    const base = getScannerSource();
+    if (/^https?:\/\//i.test(base)) {
+      return base.replace(/\/?$/, '/') + filename;
+    }
+    if (isUnderPwaPath()) {
+      return new URL('../' + filename, location.href).href;
+    }
+    return new URL('./' + filename, location.href).href;
+  }
+
+  function stockScore(s) {
+    const v = s.signal_score != null ? s.signal_score : s.score;
+    return v != null ? Number(v) : 0;
+  }
+
+  function collectGradeA(data) {
+    const seen = new Map();
+    const add = (s, sectorLabel) => {
+      if (!s || s.grade !== 'A') return;
+      const t = s.ticker || s.code || '';
+      if (seen.has(t)) return;
+      seen.set(t, { ...s, sector: s.sector || sectorLabel || '—' });
+    };
+    (data.candidates || []).forEach(c => add(c));
+    (data.watchlist || []).forEach(c => add(c));
+    const all = data.all_sectors;
+    if (all && typeof all === 'object') {
+      Object.keys(all).forEach(secKey => {
+        const sv = all[secKey];
+        (sv.stocks || []).forEach(st => add(st, secKey));
+      });
+    }
+    return Array.from(seen.values()).sort((a, b) => stockScore(b) - stockScore(a));
+  }
+
+  function collectGradeBWatchlist(data) {
+    return (data.watchlist || [])
+      .filter(s => s.grade === 'B')
+      .sort((a, b) => stockScore(b) - stockScore(a));
+  }
+
+  function renderPeakBanner(ns, root) {
+    if (!ns || !ns.current_peak_risk || !ns.reasoning) return;
+    const el = document.createElement('div');
+    el.className = 'peak-banner';
+    el.textContent = '⚠ ' + ns.reasoning;
+    root.appendChild(el);
+  }
+
+  function renderNextCard(ns, sectorScores, root) {
+    const card = document.createElement('div');
+    card.className = 'card';
+    const h = document.createElement('h2');
+    h.textContent = '다음 순환 예측';
+    card.appendChild(h);
+
+    const hc = (ns && ns.high_conviction) || [];
+    const line1 = document.createElement('div');
+    line1.className = 'next-line';
+    line1.innerHTML = '<strong>고확신</strong>' +
+      (hc.length ? '★ ' + hc.join(' · ') : '—');
+
+    const nic = (ns && ns.next_in_cycle) || [];
+    const line2 = document.createElement('div');
+    line2.className = 'next-line';
+    const nicStr = nic.map(name => {
+      const tr = sectorScores && sectorScores[name] && sectorScores[name].rs_trend;
+      const down = tr != null && tr < 0;
+      return name + (down ? ' (RS하락중)' : '');
+    }).join(' · ');
+    line2.innerHTML = '<strong>순환 대기</strong>' + (nicStr || '—');
+
+    const rsR = (ns && ns.rs_rising) || [];
+    const line3 = document.createElement('div');
+    line3.className = 'next-line';
+    line3.innerHTML = '<strong>RS 상승중</strong>' +
+      (rsR.length ? rsR.join(' · ') + ' ↑' : '—');
+
+    card.appendChild(line1);
+    card.appendChild(line2);
+    card.appendChild(line3);
+    root.appendChild(card);
+  }
+
+  function trendArrow(rsTrend) {
+    if (rsTrend == null) return '—';
+    if (rsTrend > 0.5) return '↑+' + Number(rsTrend).toFixed(1);
+    if (rsTrend < -0.5) return '↓' + Number(rsTrend).toFixed(1);
+    return '→' + Number(rsTrend).toFixed(1);
+  }
+
+  function renderSectorAccordion(sectorScores, root) {
+    if (!sectorScores || !Object.keys(sectorScores).length) return;
+
+    const wrap = document.createElement('div');
+    wrap.className = 'card';
+    const hdr = document.createElement('div');
+    hdr.className = 'accordion-header';
+    hdr.innerHTML = '<span>섹터 RS 현황</span><span class="chev" id="rs-chev">▼</span>';
+    const body = document.createElement('div');
+    body.className = 'accordion-body open';
+    body.id = 'sector-rs-body';
+
+    const rows = Object.entries(sectorScores)
+      .sort((a, b) => (b[1].avg_rs || 0) - (a[1].avg_rs || 0));
+
+    rows.forEach(([name, sc]) => {
+      const avg = sc.avg_rs != null ? Number(sc.avg_rs) : 0;
+      const tr = sc.rs_trend != null ? Number(sc.rs_trend) : null;
+      const row = document.createElement('div');
+      row.className = 'sector-row';
+      const pct = Math.max(0, Math.min(100, avg));
+      const lead = sc.is_leading ? '<span class="badge-lead">주도</span>' : '';
+      row.innerHTML =
+        '<div class="sector-row-top">' +
+        '<div>' + lead + '<span>' + name + '</span></div>' +
+        '<div><span class="rs-num">RS=' + avg.toFixed(1) + '</span>' +
+        '<span class="trend">' + trendArrow(tr) + '</span></div></div>' +
+        '<div class="rs-bar"><div class="rs-fill" style="width:' + pct + '%"></div></div>';
+      body.appendChild(row);
+    });
+
+    hdr.addEventListener('click', () => {
+      body.classList.toggle('open');
+      document.getElementById('rs-chev').textContent = body.classList.contains('open') ? '▼' : '▶';
+    });
+
+    wrap.appendChild(hdr);
+    wrap.appendChild(body);
+    root.appendChild(wrap);
+  }
+
+  function renderStockScroll(gradeAs, root) {
+    const sec = document.createElement('div');
+    sec.className = 'card';
+    const h = document.createElement('h2');
+    h.textContent = 'Grade A';
+    sec.appendChild(h);
+    if (!gradeAs.length) {
+      const p = document.createElement('p');
+      p.style.color = 'var(--text2)';
+      p.style.fontSize = '13px';
+      p.textContent = '해당 없음';
+      sec.appendChild(p);
+      root.appendChild(sec);
+      return;
+    }
+    const scroll = document.createElement('div');
+    scroll.className = 'stock-scroll';
+    gradeAs.forEach(s => {
+      const c = document.createElement('div');
+      c.className = 'stock-card';
+      const sc = stockScore(s);
+      c.innerHTML =
+        '<div class="ticker">' + (s.ticker || '') + '</div>' +
+        '<div class="meta">score ' + sc + '</div>' +
+        '<div class="meta">' + (s.sector || '') + '</div>' +
+        '<div class="meta">' + (s.entry_signal || '') + '</div>';
+      scroll.appendChild(c);
+    });
+    sec.appendChild(scroll);
+    root.appendChild(sec);
+  }
+
+  function renderWatchB(list, root) {
+    const wrap = document.createElement('div');
+    wrap.className = 'card';
+    const hdr = document.createElement('div');
+    hdr.className = 'accordion-header';
+    hdr.innerHTML = '<span>Grade B watchlist</span><span class="chev" id="b-chev">▼</span>';
+    const body = document.createElement('div');
+    body.className = 'accordion-body open';
+    body.id = 'watch-b-body';
+
+    if (!list.length) {
+      const p = document.createElement('p');
+      p.style.padding = '8px 0';
+      p.style.color = 'var(--text2)';
+      p.style.fontSize = '13px';
+      p.textContent = '없음';
+      body.appendChild(p);
+    } else {
+      list.forEach(s => {
+        const sc = stockScore(s);
+        const div = document.createElement('div');
+        div.className = 'watch-item';
+        div.innerHTML =
+          '<div class="nm">' + (s.name || s.ticker) + ' · ' + (s.ticker || '') + '</div>' +
+          '<div style="color:var(--text2);font-size:12px;margin-top:2px">' +
+          (s.sector || '') + ' · score ' + sc + '</div>';
+        body.appendChild(div);
+      });
+    }
+
+    hdr.addEventListener('click', () => {
+      body.classList.toggle('open');
+      document.getElementById('b-chev').textContent = body.classList.contains('open') ? '▼' : '▶';
+    });
+
+    wrap.appendChild(hdr);
+    wrap.appendChild(body);
+    root.appendChild(wrap);
+  }
+
+  function showError(root, msg) {
+    root.innerHTML = '';
+    const e = document.createElement('div');
+    e.className = 'error-box';
+    e.textContent = msg || '데이터를 불러오지 못했습니다. URL 설정(⚙) 또는 네트워크를 확인하세요.';
+    root.appendChild(e);
+  }
+
+  function render(data, market) {
+    const root = document.getElementById('main');
+    root.innerHTML = '';
+    if (!data) {
+      showError(root);
+      return;
+    }
+
+    const ns = data.next_sectors || {};
+    const sectorScores = data.sector_scores || {};
+
+    renderPeakBanner(ns, root);
+
+    renderNextCard(ns, sectorScores, root);
+    renderSectorAccordion(sectorScores, root);
+    renderStockScroll(collectGradeA(data), root);
+    renderWatchB(collectGradeBWatchlist(data), root);
+
+    const foot = document.createElement('p');
+    foot.className = 'footer-note';
+    foot.textContent = '갱신: ' + (data.generated_at || '—') +
+      ' · ' + (market === 'kospi' ? '코스피' : 'S&P 500');
+    root.appendChild(foot);
+  }
+
+  async function loadData(market) {
+    const filename = market === 'kospi' ? 'relay_universe.json' : 'sp500_universe.json';
+    const base = resolveJsonUrl(filename);
+    const sep = base.indexOf('?') >= 0 ? '&' : '?';
+    const url = base + sep + 't=' + Date.now();
+    try {
+      const res = await fetch(url, { cache: 'no-store' });
+      if (!res.ok) throw new Error('HTTP ' + res.status);
+      return await res.json();
+    } catch (e) {
+      return null;
+    }
+  }
+
+  async function refresh() {
+    const d = await loadData(currentTab);
+    render(d, currentTab);
+  }
+
+  function setTab(tab) {
+    currentTab = tab;
+    document.querySelectorAll('.tab').forEach(t => {
+      t.classList.toggle('active', t.getAttribute('data-tab') === tab);
+    });
+    refresh();
+  }
+
+  document.querySelectorAll('.tab').forEach(el => {
+    el.addEventListener('click', () => setTab(el.getAttribute('data-tab')));
+  });
+
+  document.getElementById('refresh').addEventListener('click', refresh);
+
+  document.getElementById('settings').addEventListener('click', () => {
+    const cur = getScannerSource();
+    const hint = cur === './' ? '' : cur;
+    const url = window.prompt(
+      '데이터(JSON) 베이스 URL (예: https://USER.github.io/sector-scanner/)',
+      hint || ''
+    );
+    if (url === null) return;
+    const v = String(url).trim();
+    if (v === '' || v === 'local') {
+      localStorage.setItem(STORAGE_KEY, './');
+    } else {
+      localStorage.setItem(STORAGE_KEY, v.replace(/\/?$/, '/'));
+    }
+    refresh();
+  });
+
+  if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.register('./sw.js').catch(function () {});
+  }
+
+  initSourceFromQuery();
+  refresh();
+})();
+</script>
+</body>
+</html>

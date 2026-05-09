@@ -1,0 +1,421 @@
+{
+  "generated_at": "2026-05-09T10:23:39",
+  "leading_sectors": [
+    "원전·전력",
+    "반도체·AI"
+  ],
+  "candidates": [],
+  "watchlist": [
+    {
+      "ticker": "034020",
+      "name": "두산에너빌리티",
+      "sector": "원전·전력",
+      "price": 129600,
+      "rs_20": 96.58,
+      "rsi_14": 65.04,
+      "vol_ratio": 0.0003,
+      "above_ma": true,
+      "pullback_pct": 4.99,
+      "signal_score": 50,
+      "entry_signal": "★★ 관망대기",
+      "grade": "B",
+      "cfg": {
+        "tickers": [
+          "034020",
+          "298040",
+          "010120",
+          "267260"
+        ],
+        "names": [
+          "두산에너빌리티",
+          "효성중공업",
+          "LS ELECTRIC",
+          "HD현대일렉트릭"
+        ],
+        "rs_min": 60,
+        "vol_mult": 1.2,
+        "ma_period": 20,
+        "pullback_min": 0.07,
+        "pullback_max": 0.15,
+        "rsi_lo": 40,
+        "rsi_hi": 55,
+        "take1_pct": 0.18,
+        "take2_pct": 0.3,
+        "stop_pct": 0.05,
+        "trail_pct": 0.08
+      }
+    },
+    {
+      "ticker": "298040",
+      "name": "효성중공업",
+      "sector": "원전·전력",
+      "price": 4398000,
+      "rs_20": 100.0,
+      "rsi_14": 75.69,
+      "vol_ratio": 0.8255,
+      "above_ma": true,
+      "pullback_pct": 4.41,
+      "signal_score": 50,
+      "entry_signal": "★★ 관망대기",
+      "grade": "B",
+      "cfg": {
+        "tickers": [
+          "034020",
+          "298040",
+          "010120",
+          "267260"
+        ],
+        "names": [
+          "두산에너빌리티",
+          "효성중공업",
+          "LS ELECTRIC",
+          "HD현대일렉트릭"
+        ],
+        "rs_min": 60,
+        "vol_mult": 1.2,
+        "ma_period": 20,
+        "pullback_min": 0.07,
+        "pullback_max": 0.15,
+        "rsi_lo": 40,
+        "rsi_hi": 55,
+        "take1_pct": 0.18,
+        "take2_pct": 0.3,
+        "stop_pct": 0.05,
+        "trail_pct": 0.08
+      }
+    },
+    {
+      "ticker": "010120",
+      "name": "LS ELECTRIC",
+      "sector": "원전·전력",
+      "price": 313000,
+      "rs_20": 100.0,
+      "rsi_14": 87.09,
+      "vol_ratio": 0.7056,
+      "above_ma": true,
+      "pullback_pct": 1.73,
+      "signal_score": 50,
+      "entry_signal": "★★ 관망대기",
+      "grade": "B",
+      "cfg": {
+        "tickers": [
+          "034020",
+          "298040",
+          "010120",
+          "267260"
+        ],
+        "names": [
+          "두산에너빌리티",
+          "효성중공업",
+          "LS ELECTRIC",
+          "HD현대일렉트릭"
+        ],
+        "rs_min": 60,
+        "vol_mult": 1.2,
+        "ma_period": 20,
+        "pullback_min": 0.07,
+        "pullback_max": 0.15,
+        "rsi_lo": 40,
+        "rsi_hi": 55,
+        "take1_pct": 0.18,
+        "take2_pct": 0.3,
+        "stop_pct": 0.05,
+        "trail_pct": 0.08
+      }
+    },
+    {
+      "ticker": "267260",
+      "name": "HD현대일렉트릭",
+      "sector": "원전·전력",
+      "price": 1403000,
+      "rs_20": 100.0,
+      "rsi_14": 74.85,
+      "vol_ratio": 0.9308,
+      "above_ma": true,
+      "pullback_pct": 1.2,
+      "signal_score": 50,
+      "entry_signal": "★★ 관망대기",
+      "grade": "B",
+      "cfg": {
+        "tickers": [
+          "034020",
+          "298040",
+          "010120",
+          "267260"
+        ],
+        "names": [
+          "두산에너빌리티",
+          "효성중공업",
+          "LS ELECTRIC",
+          "HD현대일렉트릭"
+        ],
+        "rs_min": 60,
+        "vol_mult": 1.2,
+        "ma_period": 20,
+        "pullback_min": 0.07,
+        "pullback_max": 0.15,
+        "rsi_lo": 40,
+        "rsi_hi": 55,
+        "take1_pct": 0.18,
+        "take2_pct": 0.3,
+        "stop_pct": 0.05,
+        "trail_pct": 0.08
+      }
+    },
+    {
+      "ticker": "000660",
+      "name": "SK하이닉스",
+      "sector": "반도체·AI",
+      "price": 1686000,
+      "rs_20": 100.0,
+      "rsi_14": 85.38,
+      "vol_ratio": 0.0063,
+      "above_ma": true,
+      "pullback_pct": 0.0,
+      "signal_score": 50,
+      "entry_signal": "★★ 관망대기",
+      "grade": "B",
+      "cfg": {
+        "tickers": [
+          "000660",
+          "005930",
+          "042700",
+          "086520",
+          "240810"
+        ],
+        "names": [
+          "SK하이닉스",
+          "삼성전자",
+          "한미반도체",
+          "에코프로비엠",
+          "원익IPS"
+        ],
+        "rs_min": 65,
+        "vol_mult": 1.3,
+        "ma_period": 20,
+        "pullback_min": 0.05,
+        "pullback_max": 0.12,
+        "rsi_lo": 40,
+        "rsi_hi": 55,
+        "take1_pct": 0.15,
+        "take2_pct": 0.25,
+        "stop_pct": 0.05,
+        "trail_pct": 0.07
+      }
+    },
+    {
+      "ticker": "005930",
+      "name": "삼성전자",
+      "sector": "반도체·AI",
+      "price": 268500,
+      "rs_20": 95.73,
+      "rsi_14": 74.14,
+      "vol_ratio": 0.756,
+      "above_ma": true,
+      "pullback_pct": 1.1,
+      "signal_score": 50,
+      "entry_signal": "★★ 관망대기",
+      "grade": "B",
+      "cfg": {
+        "tickers": [
+          "000660",
+          "005930",
+          "042700",
+          "086520",
+          "240810"
+        ],
+        "names": [
+          "SK하이닉스",
+          "삼성전자",
+          "한미반도체",
+          "에코프로비엠",
+          "원익IPS"
+        ],
+        "rs_min": 65,
+        "vol_mult": 1.3,
+        "ma_period": 20,
+        "pullback_min": 0.05,
+        "pullback_max": 0.12,
+        "rsi_lo": 40,
+        "rsi_hi": 55,
+        "take1_pct": 0.15,
+        "take2_pct": 0.25,
+        "stop_pct": 0.05,
+        "trail_pct": 0.07
+      }
+    },
+    {
+      "ticker": "042700",
+      "name": "한미반도체",
+      "sector": "반도체·AI",
+      "price": 390000,
+      "rs_20": 100.0,
+      "rsi_14": 73.42,
+      "vol_ratio": 0.4851,
+      "above_ma": true,
+      "pullback_pct": 1.14,
+      "signal_score": 50,
+      "entry_signal": "★★ 관망대기",
+      "grade": "B",
+      "cfg": {
+        "tickers": [
+          "000660",
+          "005930",
+          "042700",
+          "086520",
+          "240810"
+        ],
+        "names": [
+          "SK하이닉스",
+          "삼성전자",
+          "한미반도체",
+          "에코프로비엠",
+          "원익IPS"
+        ],
+        "rs_min": 65,
+        "vol_mult": 1.3,
+        "ma_period": 20,
+        "pullback_min": 0.05,
+        "pullback_max": 0.12,
+        "rsi_lo": 40,
+        "rsi_hi": 55,
+        "take1_pct": 0.15,
+        "take2_pct": 0.25,
+        "stop_pct": 0.05,
+        "trail_pct": 0.07
+      }
+    },
+    {
+      "ticker": "240810",
+      "name": "원익IPS",
+      "sector": "반도체·AI",
+      "price": 132900,
+      "rs_20": 65.72,
+      "rsi_14": 62.02,
+      "vol_ratio": 0.6829,
+      "above_ma": true,
+      "pullback_pct": 0.0,
+      "signal_score": 50,
+      "entry_signal": "★★ 관망대기",
+      "grade": "B",
+      "cfg": {
+        "tickers": [
+          "000660",
+          "005930",
+          "042700",
+          "086520",
+          "240810"
+        ],
+        "names": [
+          "SK하이닉스",
+          "삼성전자",
+          "한미반도체",
+          "에코프로비엠",
+          "원익IPS"
+        ],
+        "rs_min": 65,
+        "vol_mult": 1.3,
+        "ma_period": 20,
+        "pullback_min": 0.05,
+        "pullback_max": 0.12,
+        "rsi_lo": 40,
+        "rsi_hi": 55,
+        "take1_pct": 0.15,
+        "take2_pct": 0.25,
+        "stop_pct": 0.05,
+        "trail_pct": 0.07
+      }
+    },
+    {
+      "ticker": "086520",
+      "name": "에코프로비엠",
+      "sector": "반도체·AI",
+      "price": 155000,
+      "rs_20": 52.06,
+      "rsi_14": 50.61,
+      "vol_ratio": 0.9737,
+      "above_ma": true,
+      "pullback_pct": 5.66,
+      "signal_score": 45,
+      "entry_signal": "★★ 관망대기",
+      "grade": "B",
+      "cfg": {
+        "tickers": [
+          "000660",
+          "005930",
+          "042700",
+          "086520",
+          "240810"
+        ],
+        "names": [
+          "SK하이닉스",
+          "삼성전자",
+          "한미반도체",
+          "에코프로비엠",
+          "원익IPS"
+        ],
+        "rs_min": 65,
+        "vol_mult": 1.3,
+        "ma_period": 20,
+        "pullback_min": 0.05,
+        "pullback_max": 0.12,
+        "rsi_lo": 40,
+        "rsi_hi": 55,
+        "take1_pct": 0.15,
+        "take2_pct": 0.25,
+        "stop_pct": 0.05,
+        "trail_pct": 0.07
+      }
+    }
+  ],
+  "sector_scores": {
+    "반도체·AI": {
+      "avg_rs": 82.7,
+      "avg_ret20": 0.3961,
+      "rs_trend": 0.12,
+      "is_leading": true
+    },
+    "조선": {
+      "avg_rs": 73.99,
+      "avg_ret20": 0.2093,
+      "rs_trend": -15.37,
+      "is_leading": false
+    },
+    "방산": {
+      "avg_rs": 46.3,
+      "avg_ret20": -0.0489,
+      "rs_trend": -21.85,
+      "is_leading": false
+    },
+    "원전·전력": {
+      "avg_rs": 99.15,
+      "avg_ret20": 0.6528,
+      "rs_trend": -0.85,
+      "is_leading": true
+    },
+    "금융·밸류업": {
+      "avg_rs": 70.1,
+      "avg_ret20": 0.1996,
+      "rs_trend": 1.79,
+      "is_leading": false
+    }
+  },
+  "next_sectors": {
+    "next_in_cycle": [
+      "조선",
+      "방산"
+    ],
+    "rs_rising": [
+      "금융·밸류업"
+    ],
+    "high_conviction": [
+      "금융·밸류업"
+    ],
+    "conviction_source": {
+      "금융·밸류업": "rising_only"
+    },
+    "current_peak_risk": true,
+    "reasoning": "원전·전력 RS=99.1 피크. 순환 다음: 조선·방산(RS하락중-대기). 금융·밸류업 RS빠른상승(+1.8) - 선행 진입 고려"
+  },
+  "market_source": "KODEX200_069500"
+}
