@@ -2,6 +2,26 @@
 
 `scanner.py` / `sp500_scanner.py`가 생성하는 `relay_universe.json`, `sp500_universe.json`을 보여 주는 로컬·모바일용 PWA입니다. 정적 파일만으로 동작하며 `pwa/index.html`을 브라우저에서 열면 됩니다.
 
+## 텔레그램 알림 (피크 경고 · Grade A)
+
+스캔 배치가 **성공한 뒤** 자동으로 `scanner_telegram_notify.py`가 실행됩니다.
+
+- **조건**: `next_sectors.current_peak_risk` 이거나 **Grade A** 종목이 1개 이상일 때만 전송합니다.
+- **중복 방지**: 피크 문구·Grade A 티커 목록이 직전 실행과 같으면 보내지 않습니다. (`scanner_telegram_notify_state.json`, git 제외)
+- **강제 전송**: `py -3.12 scanner_telegram_notify.py --state-dir "..." --market kospi --force`
+
+### 설정
+
+1. `telegram_secrets.cmd.example` 을 복사해 **`telegram_secrets.cmd`** 로 두고, `TELEGRAM_BOT_TOKEN` · `TELEGRAM_CHAT_ID` 를 채웁니다. (이 파일은 `.gitignore`에 포함)
+2. `run_sector_scanner_weekly.bat` / `run_sp500_scanner_weekly.bat` 는 스캔 성공 시 해당 파일이 있으면 `call` 한 뒤 알림 스크립트를 돌립니다.
+3. 메시지 하단 PWA URL은 필요 시 환경변수 `SCANNER_PWA_URL` 로 덮어쓸 수 있습니다.
+
+### 수동 테스트
+
+```bat
+py -3.12 scanner_telegram_notify.py --state-dir "C:\Users\windows\Desktop\키움" --market kospi --dry-run
+```
+
 ## PWA (GitHub Pages)
 
 저장소 루트에 `relay_universe.json`, `sp500_universe.json`, `pwa/`를 두고 `gh-pages` 브랜치 등으로 배포합니다. 배포 후 PWA 주소: [https://hahahan-bot.github.io/magic-scanner/pwa/index.html](https://hahahan-bot.github.io/magic-scanner/pwa/index.html)

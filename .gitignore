@@ -1,0 +1,6 @@
+telegram_secrets.ps1
+telegram_secrets.cmd
+scanner_telegram_notify_state.json
+dart_cache/
+dart_secrets.cmd
+.venv_krx/
