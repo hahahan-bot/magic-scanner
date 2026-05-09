@@ -4,14 +4,14 @@
 
 ## PWA (GitHub Pages)
 
-저장소 루트에 `relay_universe.json`, `sp500_universe.json`, `pwa/`를 두고 `gh-pages` 브랜치 등으로 배포합니다. 예시 URL: `https://USERNAME.github.io/sector-scanner/pwa/index.html` (저장소 경로에 맞게 조정)
+저장소 루트에 `relay_universe.json`, `sp500_universe.json`, `pwa/`를 두고 `gh-pages` 브랜치 등으로 배포합니다. 배포 후 PWA 주소: [https://hahahan-bot.github.io/magic-scanner/pwa/index.html](https://hahahan-bot.github.io/magic-scanner/pwa/index.html)
 
 ### 초기 업로드 (한 번)
 
 ```bat
 cd /d "C:\Users\windows\Desktop\키움"
 git init
-git remote add origin https://github.com/USERNAME/sector-scanner.git
+git remote add origin https://github.com/hahahan-bot/magic-scanner.git
 git checkout -b gh-pages
 git add pwa/ relay_universe.json sp500_universe.json
 git commit -m "init"
@@ -24,9 +24,9 @@ GitHub 저장소 **Settings → Pages**에서 Source: **Deploy from a branch**, 
 
 ### 모바일 앱 설치 (안드로이드)
 
-1. Chrome에서 아래 URL을 엽니다 (USERNAME·저장소명은 본인 것으로 바꿉니다).
+1. Chrome에서 아래 URL을 엽니다.
 
-   `https://USERNAME.github.io/sector-scanner/pwa/index.html`
+   `https://hahahan-bot.github.io/magic-scanner/pwa/index.html`
 
 2. Chrome 우측 상단 메뉴(⋮) → **홈 화면에 추가** 를 선택합니다.
 
@@ -34,7 +34,7 @@ GitHub 저장소 **Settings → Pages**에서 Source: **Deploy from a branch**, 
 
 4. 첫 실행 후 상단 **⚙** 에서 데이터 베이스 URL을 입력합니다.
 
-   `https://USERNAME.github.io/sector-scanner/`
+   `https://hahahan-bot.github.io/magic-scanner/`
 
    (끝에 슬래시 포함, JSON이 놓인 **저장소 루트** 기준)
 
