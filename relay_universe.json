@@ -1,47 +1,131 @@
 {
-  "generated_at": "2026-06-05T12:02:13",
-  "leading_sectors": [],
-  "candidates": [],
+  "generated_at": "2026-06-08T08:45:23",
+  "leading_sectors": [
+    "금융·밸류업"
+  ],
+  "candidates": [
+    {
+      "ticker": "000810",
+      "name": "삼성화재",
+      "sector": "금융·밸류업",
+      "price": 695000,
+      "rs_20": 100.0,
+      "rsi_14": 75.19,
+      "vol_ratio": 1.2299,
+      "above_ma": true,
+      "pullback_pct": 4.79,
+      "signal_score": 90,
+      "entry_signal": "★★★ 강력매수",
+      "grade": "A",
+      "cfg": {
+        "tickers": [
+          "105560",
+          "016360",
+          "086790",
+          "000810"
+        ],
+        "names": [
+          "KB금융",
+          "삼성증권",
+          "하나금융지주",
+          "삼성화재"
+        ],
+        "rs_min": 55,
+        "vol_mult": 1.1,
+        "ma_period": 20,
+        "pullback_min": 0.03,
+        "pullback_max": 0.06,
+        "rsi_lo": 45,
+        "rsi_hi": 60,
+        "take1_pct": 0.12,
+        "take2_pct": 0.2,
+        "stop_pct": 0.04,
+        "trail_pct": 0.05
+      }
+    },
+    {
+      "ticker": "105560",
+      "name": "KB금융",
+      "sector": "금융·밸류업",
+      "price": 171600,
+      "rs_20": 75.49,
+      "rsi_14": 67.96,
+      "vol_ratio": 1.706,
+      "above_ma": true,
+      "pullback_pct": 0.0,
+      "signal_score": 75,
+      "entry_signal": "★★★ 강력매수",
+      "grade": "A",
+      "cfg": {
+        "tickers": [
+          "105560",
+          "016360",
+          "086790",
+          "000810"
+        ],
+        "names": [
+          "KB금융",
+          "삼성증권",
+          "하나금융지주",
+          "삼성화재"
+        ],
+        "rs_min": 55,
+        "vol_mult": 1.1,
+        "ma_period": 20,
+        "pullback_min": 0.03,
+        "pullback_max": 0.06,
+        "rsi_lo": 45,
+        "rsi_hi": 60,
+        "take1_pct": 0.12,
+        "take2_pct": 0.2,
+        "stop_pct": 0.04,
+        "trail_pct": 0.05
+      }
+    }
+  ],
   "watchlist": [],
   "sector_scores": {
     "반도체·AI": {
-      "avg_rs": 51.08,
-      "avg_ret20": 0.1099,
-      "rs_trend": -5.43,
+      "avg_rs": 51.83,
+      "avg_ret20": 0.0876,
+      "rs_trend": -4.68,
       "is_leading": false
     },
     "조선": {
-      "avg_rs": 21.56,
-      "avg_ret20": -0.1251,
-      "rs_trend": -15.46,
+      "avg_rs": 18.18,
+      "avg_ret20": -0.1281,
+      "rs_trend": -18.84,
       "is_leading": false
     },
     "방산": {
       "avg_rs": 0.0,
-      "avg_ret20": -0.2815,
+      "avg_ret20": -0.278,
       "rs_trend": -22.43,
       "is_leading": false
     },
     "원전·전력": {
       "avg_rs": 0.0,
-      "avg_ret20": -0.2253,
+      "avg_ret20": -0.2352,
       "rs_trend": -29.57,
       "is_leading": false
     },
     "금융·밸류업": {
-      "avg_rs": 53.01,
-      "avg_ret20": 0.1032,
-      "rs_trend": -4.04,
-      "is_leading": false
+      "avg_rs": 55.16,
+      "avg_ret20": 0.1066,
+      "rs_trend": -1.89,
+      "is_leading": true
     }
   },
   "next_sectors": {
-    "next_in_cycle": [],
+    "next_in_cycle": [
+      "반도체·AI",
+      "조선"
+    ],
     "rs_rising": [],
     "high_conviction": [],
     "conviction_source": {},
     "current_peak_risk": false,
-    "reasoning": "주도 섹터 없음(qualified 미달)."
+    "reasoning": "순환 다음: 반도체·AI·조선(RS하락중-대기)."
   },
   "market_source": "KODEX200_069500"
 }
